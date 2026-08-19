@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>ChatApp</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <div class="chat-app">
+            <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+            <aside class="sidebar">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="bi bi-chat-dots-fill"></i>
+                    </div>
+
+                    <span>ChatApp</span>
+                </div>
+
+                <div class="channels-header">
+                    <h5>Seus canais</h5>
+
+                    <button
+                        id="addChannel"
+                        class="add-channel"
+                        type="button"
+                        title="Criar canal"
+                    >
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+
+                <!--
+                O JavaScript vai colocar
+                os canais aqui.
+            -->
+
+                <div id="channels" class="channels"></div>
+            </aside>
+
+            <!-- =========================
+             CHAT
+        ========================== -->
+
+            <main class="chat-container">
+                <header class="chat-header">
+                    <div class="channel-title">
+                        <span>#</span>
+
+                        <strong id="channelName"> geral </strong>
+                    </div>
+
+                    <div class="header-right">
+                        <button class="theme-button" type="button">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+
+                        <div class="user-menu">
+                            <button
+                                id="usuarioMenuButton"
+                                class="logged-user"
+                                type="button"
+                            >
+                                <div id="loggedUserAvatar" class="user-avatar">
+                                    M
+                                </div>
+
+                                <div class="user-info">
+                                    <strong id="usuarioLogado">
+                                        Usuário
+                                    </strong>
+
+                                    <small> Online </small>
+                                </div>
+
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+
+                            <div id="usuarioDropdown" class="user-dropdown">
+                                <button id="logoutButton" type="button">
+                                    <i class="bi bi-box-arrow-right"></i>
+
+                                    Desconectar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- =========================
+                 MENSAGENS
+            ========================== -->
+
+                <div id="messages" class="message-body"></div>
+
+                <!-- =========================
+                 ENVIAR MENSAGEM
+            ========================== -->
+
+                <form id="messageForm" class="message-form">
+                    <input
+                        id="message"
+                        class="sender"
+                        placeholder="Digite sua mensagem..."
+                        type="text"
+                        autocomplete="off"
+                    />
+
+                    <button type="submit" class="send-button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </form>
+            </main>
+
+            <!-- =========================
+             USUÁRIOS ONLINE
+        ========================== -->
+
+            <aside class="online-sidebar">
+                <h5>
+                    Usuários online
+
+                    <span class="online-dot"></span>
+                </h5>
+
+                <!--
+                O JavaScript vai colocar
+                os usuários aqui.
+            -->
+
+                <div id="onlineUsers" class="online-users"></div>
+            </aside>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+
+        <script src="./chat.js"></script>
+    </body>
+</html>

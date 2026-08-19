@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>ChatApp - Cadastro</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+
+        <link href="./loginsCss.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main class="auth-page">
+            <div class="auth-container">
+                <!-- LOGIN -->
+
+                <section class="auth-login">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <i class="bi bi-chat-dots-fill"></i>
+                        </div>
+
+                        <span>ChatApp</span>
+                    </div>
+
+                    <h1>Bem-vindo de volta!</h1>
+
+                    <p class="subtitle">
+                        Faça login para continuar conversando.
+                    </p>
+
+                    <form class="forms" id="loginForm">
+                        <label> E-mail </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-envelope"></i>
+
+                            <input
+                                name="email"
+                                id="email"
+                                placeholder="seu@email.com"
+                                type="email"
+                                required
+                            />
+                        </div>
+
+                        <label> Senha </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock"></i>
+
+                            <input
+                                name="senha"
+                                id="senha"
+                                placeholder="Sua senha"
+                                type="password"
+                                required
+                            />
+                        </div>
+
+                        <a href="#" class="forgot-password">
+                            Esqueceu sua senha?
+                        </a>
+
+                        <button type="submit" class="auth-button">
+                            Entrar
+                        </button>
+                    </form>
+
+                    <div class="divider">
+                        <span></span>
+                        <p>ou</p>
+                        <span></span>
+                    </div>
+
+                    <button class="google-button">
+                        <span class="google-icon"> G </span>
+
+                        Entrar com Google
+                    </button>
+
+                    <p class="bottom-text">
+                        Ainda não tem uma conta?
+
+                        <a href="/register"> Cadastre-se </a>
+                    </p>
+                </section>
+
+                <!-- CADASTRO -->
+
+                <section class="auth-register">
+                    <div class="register-icon">
+                        <i class="bi bi-person-plus"></i>
+                    </div>
+
+                    <h2>Crie sua conta</h2>
+
+                    <p class="register-subtitle">
+                        Preencha os dados para se cadastrar.
+                    </p>
+
+                    <form class="forms" id="registroForm">
+                        <label> Nome </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-person"></i>
+
+                            <input
+                                name="nome"
+                                placeholder="Seu nome completo"
+                                type="text"
+                                required
+                            />
+                        </div>
+
+                        <label> E-mail </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-envelope"></i>
+
+                            <input
+                                name="email"
+                                placeholder="seu@email.com"
+                                type="email"
+                                required
+                            />
+                        </div>
+
+                        <label> Senha </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock"></i>
+
+                            <input
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                type="password"
+                                required
+                            />
+                        </div>
+
+                        <label> Confirmar senha </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock"></i>
+
+                            <input
+                                name="confirmarSenha"
+                                placeholder="Confirme sua senha"
+                                type="password"
+                                required
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="auth-button register-button"
+                        >
+                            Cadastrar
+                        </button>
+                    </form>
+
+                    <p class="bottom-text">
+                        Já tem uma conta?
+
+                        <a href="/"> Faça login </a>
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <script src="./login.js"></script>
+        <script src="./register.js"></script>
+    </body>
+</html>
