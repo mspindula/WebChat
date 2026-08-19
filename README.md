@@ -13,8 +13,8 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="./public/assets/chat1.png" alt="ChatApp" width="900">
-  <img src="./public/assets/chat2.png" alt="ChatApp" width="900">
+  <img src="./assets/chat1.png" alt="ChatApp" width="900">
+  <img src="./assets/chat2.png" alt="ChatApp" width="900">
 </p>
 
 ---
